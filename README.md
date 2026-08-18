@@ -12,13 +12,17 @@ Prompt Petals are small modular prompts, systems, or engines to use in AI rolepl
 The end goal is, of course, to create as much realism to a living being as humanly (or rather, AIly) possible. As time goes on and AI becomes more and more fluid, this will probably be achieved someday without external prompting. My dream is for my work to be influential towards it's evolution to a more life-like state.
 
 ## Installation
-- Select the prompt/engine/system you want to import into your chat completion. Copy it either **with the copy button on github** or choosing to **copy the raw code**. Do not try to copy the preview. It's unfortunate, but adding line breaks and backticks would show in the copy, and trailing spaces would add unwanted fluff tokens. There is no way to make the preview look nice, but it will look nice in ST if you copy it the recommended ways.
+- Select the prompt/engine/system you want to import into your chat completion.
+- Copy it.
 - Click the settings icon in Sillytavern.
 - Scroll down until you see "View / Edit bias preset". Below that you will see "Prompts" above a dropdown menu.
 - All the way to the right of that dropdown, click the + button.
 - Name it.
 - Paste the text into the large field and click the save button.
 - Make sure it's ticked on before starting your next roleplay.
+
+>[!WARNING]
+>The github preview is wonky, I know. It's just how markdown works. If you choose to copy the preview, lists should persist, but just in case I'd copy the raw code via the copy button.
 
 ## Can I alter petals?
 You *should* alter petals. This is your roleplay. The only reason a license exists in this repository is to future-proof it against big corp theft. I just don't want them to be able to claim these ideas and lock them down in legal jail so no one else can use them. Whereas AI roleplay isn't really a business model now, I feel that, with how AI is expanding, it will be in the future. So feel free to use, alter, and share these engines and prompts. The only thing I require of you is that you allow your versions to be shared and altered if you go public with them.
