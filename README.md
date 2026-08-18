@@ -12,8 +12,9 @@ Prompt Petals are small modular prompts, systems, or engines to use in AI rolepl
 The end goal is, of course, to create as much realism to a living being as humanly (or rather, AIly) possible. As time goes on and AI becomes more and more fluid, this will probably be achieved someday without external prompting. My dream is for my work to be influential towards it's evolution to a more life-like state.
 
 ## Installation
-- Select the prompt/engine/system you want to import into your chat completion. Copy it.
-- Click the settings icon in Sillytavern. Scroll down until you see "View / Edit bias preset". Below that you will see "Prompts" above a dropdown menu.
+- Select the prompt/engine/system you want to import into your chat completion. Copy it either **with the copy button on github** or choosing to **copy the raw code**. Do not try to copy the preview. It's unfortunate, but adding line breaks and backticks would show in the copy, and trailing spaces would add unwanted fluff tokens. There is no way to make the preview look nice, but it will look nice in ST if you copy it the recommended ways.
+- Click the settings icon in Sillytavern.
+- Scroll down until you see "View / Edit bias preset". Below that you will see "Prompts" above a dropdown menu.
 - All the way to the right of that dropdown, click the + button.
 - Name it.
 - Paste the text into the large field and click the save button.
@@ -24,7 +25,7 @@ You *should* alter petals. This is your roleplay. The only reason a license exis
 
 The words and prompts themselves don't really matter here, it's the engines I'm trying to make that I want to keep free and available to all forever. Just in case I stumble upon something really good in my messing around. Already authoring a preset and want to add a petal in? Please do. I'd be honored.
 
-##License
+## License
 Prompt Petals © 2026 SleepyScribe
 
 Licensed under Creative Commons Attribution-ShareAlike 4.0
