@@ -1,6 +1,7 @@
 # prompt-petals
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/d3b012a2-5a96-4678-9de5-f5c42d92ce10" />
+
 ## Welcome to Prompt Petals
----
 Prompt Petals are small modular prompts, systems, or engines to use in AI roleplay. Each module I make is a "petal" to be placed in your already existing presets. These are prompts I make up as I go and can and will be unstable more often than not. I hope someday to make enough petals to make a flower, i.e. my own complete preset. Each petal is made with the help of AI.
 
 - I handcraft a petal.
