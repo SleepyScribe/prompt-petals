@@ -1,5 +1,6 @@
 # prompt-petals
-<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/5d87c377-4e69-4ef3-9d0d-fae356f1fff6" />
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/ad5acf75-42e5-418c-9d89-c4b323c383d6" />
+
 
 ## Welcome to Prompt Petals
 The first idea I had for Prompt Petals were small, modular additions to add to already existing presets. However, as presets have evolved, the idea has become... unnecessary. Presets these days cover everything they need, and are written so well and woven together with their own mechanisms that it doesn't seem to wise nor easy to input a new module. Instead, I have created a preset which I call **The Flower Council**. The idea behind the preset is to be a medium-size prompt for mid-level machines to run small quants locally and keep most coherency over long-form roleplay.
