@@ -1,0 +1,9 @@
+{
+    "display_name": "Prompt Petals - Emotion Engine",
+    "loading_order": 50,
+    "js": "index.js",
+    "css": "style.css",
+    "author": "SleepyScribe",
+    "version": "0.1.0",
+    "auto_update": false
+}

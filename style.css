@@ -1,0 +1,523 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #333239;
+    --sub-color: #24232A;
+    --text-color: #969696;
+    --sub-text-color: #C8C8C8;
+    --button-color: #424149;
+    --button-hover-color: #4C4959;
+    --detail-color: #A7906F;
+    --sub-detail-color: #D79AA0;
+    --tert-detail-color: #74B875;
+    --error-color: #9C454E;
+
+}
+
+#sakura-emotion-button {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--sub-color);
+    background: var(--main-color);
+    color: var(--sub-text-color);
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sak-squarebutt {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 4px;
+    line-height: 1;
+    background: var(--button-color);
+    border: 1px solid var(--sub-color);
+    cursor: pointer;
+    transition: all 0.30s ease;
+}
+
+.sak-squarebutt i {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+    pointer-events: none;
+    color: var(--text-color);
+    transition: all 0.30s ease;
+}
+
+.sak-squarebutt:hover {
+    background: var(--button-hover-color);
+}
+
+.sak-squarebutt:hover i {
+    color: var(--sub-text-color);
+}
+
+.sak-menu-button {
+    background: var(--button-color);
+    color: var(--text-color);
+    border: 1px solid var(--sub-color);
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.30s ease;
+}
+
+.sak-menu-button:hover {
+    background: var(--button-hover-color);
+}
+
+#sakura-emotion-button:hover {
+    transform: scale(1.08);
+}
+
+.sak-no-characters {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+}
+
+.sak-no-characters h2 {
+    margin-bottom: 8px;
+}
+
+.sak-no-characters p {
+    margin: 0;
+
+    opacity: 0.7;
+}
+
+.popup:has(#sakura-editor) {
+    background: var(--main-color);
+    border: 2px solid var(--sub-color);
+}
+
+#sakura-editor {
+    padding: 10px;
+    background: var(--main-color);
+    color: var(--text-color);
+}
+
+#sakura-editor h2 {
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.sak-editor-description {
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.sak-emotion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    column-gap: 36px;
+    row-gap: 10px;
+    width: min(100%, 760px);
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.sak-emotion-row {
+    display: grid;
+    grid-template-columns:
+        120px
+        70px
+        34px
+        30px;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.sak-emotion-row label {
+    font-weight: 500;
+}
+
+
+.sak-emotion-input {
+    width: 70px;
+    text-align: center;
+    padding: 5px 7px;
+    border-radius: 5px;
+    background: var(--sub-color);
+    color: var(--text-color);
+    border: 1px solid var(--detail-color);
+    font-weight: 600;
+    box-sizing: border-box;
+
+}
+
+.sak-editor-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+#sakura-editor {
+    position: relative;
+}
+
+#sak-editor-close:hover {
+    opacity: 0.7;
+}
+
+.sak-character-selector {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 0 auto 10px;
+}
+
+#sak-character-select {
+    display: block;
+    width: 180px;
+    height: 30px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: var(--sub-color);
+    color: var(--text-color);
+    border: 1px solid var(--detail-color);
+}
+
+.sak-character-selector-spacer {
+    display: none;
+}
+
+#sak-add-emotion {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 98px);
+    transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--sub-color);
+    font-weight: 1px;
+}
+
+#sak-add-emotion:hover {
+    background: var(--button-hover-color);
+}
+
+/* Character delete control alongside the selector and add-emotion button. */
+#sak-delete-character {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 140px);
+    transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    background: var(--error-color);
+    border: 1px solid var(--sub-color);
+    color: #fff;
+}
+
+#sak-delete-character i {
+    color: #fff;
+}
+
+#sak-delete-character:hover {
+    background: #d12b42;
+    border-color: #fff;
+}
+
+#sak-delete-character:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+
+#sak-add-emotion-panel {
+    border: 1px solid var(--text-color);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.sak-delete-emotion {
+    border: 1px solid var(--sub-color);
+    background: var(--error-color);
+    color: var(--sub-text-color);
+    transition: all 0.30s ease;
+}
+
+.sak-delete-emotion i{
+    color: var(--sub-text-color);
+    transition: all 0.30s ease;
+}
+
+.sak-delete-emotion:hover {
+    background: red;
+    border-color: white;
+}
+
+.sak-delete-emotion:hover i {
+    color: white;
+}
+
+#sak-delete-emotion-panel {
+    border: 1px solid var(--text-color);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: -1px;
+}
+
+
+.sak-emotion-lock:has(.fa-lock-open) {
+    border: 1px solid var(--tert-detail-color);
+}
+
+.sak-emotion-lock:has(.fa-lock) {
+    border: 1px solid var(--error-color) !important;
+}
+
+.sak-emotion-lock .fa-lock-open {
+    color: var(--tert-detail-color) !important;
+}
+
+.sak-emotion-lock .fa-lock {
+    color: var(--error-color) !important;
+}
+
+#sak-emotion-save {
+    background: var(--button-color) !important;
+    color: var(--text-color);
+    border: 1px solid var(--sub-color);
+    transition: all 0.30s ease !important;
+}
+
+#sak-emotion-save:hover {
+    background: var(--tert-detail-color) !important;
+    color: white;
+}
+
+#sak-add-emotion-input {
+    color: var(--text-color);
+    background: var(--sub-color);
+    border: 1px solid var(--detail-color);
+    border-radius: 4px;
+}
+
+#sak-editor-settings {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#sakura-settings {
+    position: relative;
+    padding: 10px 18px 16px;
+    background: var(--main-color);
+    color: var(--text-color);
+}
+
+.popup:has(#sakura-settings) {
+    background: var(--main-color);
+}
+
+#sakura-settings h2 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+#sak-settings-back {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+}
+
+.sak-setting-row {
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 10px;
+    max-width: 520px;
+    margin: 0 auto 14px;
+    padding: 10px 12px;
+    border: 1px solid #989898;
+    border-radius: 6px;
+    background: #181818;
+}
+
+.sak-setting-row label {
+    font-weight: 600;
+    line-height: 1.2;
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+}
+
+.sak-setting-row input[type="number"] {
+    width: 90px;
+    height: 32px;
+    padding:
+        4px
+        8px;
+    box-sizing: border-box;
+    text-align: center;
+    background: var(--sub-color);
+    color: var(--text-color);
+    border: 1px solid var(--detail-color);
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.sak-setting-row p {
+    grid-column:
+        1 / -1;
+    margin:
+        3px 0 0;
+    font-size:
+        0.88em;
+    line-height:
+        1.35;
+    opacity:
+        0.7;
+}
+
+#sak-editor-close i {
+    opacity: 0;
+}
+
+#sak-editor-close {
+  position: absolute;
+  top: 8px;
+  right: 0px;
+  width: 48px;
+  height: 48px;
+  transform: rotate(45deg);
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 100;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(2px 4px 8px rgba(146, 52, 103, 0.35));
+}
+
+#sak-editor-close::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: path("M 24 0 C 37 4, 46 16, 42 30 C 38 40, 27 46, 24 48 C 21 46, 10 40, 6 30 C 2 16, 11 4, 24 0 Z");
+  background:
+    radial-gradient(circle at 50% 85%, rgba(255, 255, 255, 0.35) 0%, transparent 40%),
+    repeating-radial-gradient(circle at 50% 90%, transparent 0, transparent 3px, rgba(0, 0, 0, 0.03) 4px, transparent 5px),
+    linear-gradient(180deg, #ff758c 0%, #ff7eb3 45%, #923467 100%);
+  transition: filter 0.2s ease;
+}
+#sak-editor-close span {
+  position: relative;
+  z-index: 2;
+  transform: rotate(-45deg);
+}
+
+#sak-editor-close:hover {
+  transform: rotate(45deg) scale(1.08);
+  filter: drop-shadow(3px 6px 10px rgba(146, 52, 103, 0.45));
+}
+
+#sak-editor-close:hover::before {
+  filter: brightness(1.08);
+}
+
+#sak-editor-close:active {
+  transform: rotate(45deg) scale(0.94);
+  filter: drop-shadow(1px 3px 5px rgba(146, 52, 103, 0.3));
+}
+
+@media (max-width: 1375px) {
+    .sak-emotion-grid {
+        grid-template-columns: minmax(280px, 360px);
+        align-items: center;
+        justify-content: center;
+        column-gap: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sak-setting-row {
+        grid-template-columns:
+            1fr
+            80px;
+        column-gap:
+            10px;
+    }
+
+    .sak-setting-row input[type="number"] {
+        width: 80px;
+    }
+
+    #sakura-emotion-button {
+        position: static;
+        right: auto;
+        bottom: auto;
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        margin: 0 10px 4px 0;
+        border-radius: 4px;
+        z-index: auto;
+        flex: 0 0 auto;
+        transform: none;
+        border: none;
+        font-size: 1rem;
+        opacity: 0.7;
+        order:999;
+    }
+
+    #sakura-emotion-button:hover {
+        opacity: 1;
+    }
+
+    #sakura-emotion-button.sak-mobile-button:hover {
+        transform: none;
+    }
+}
+
