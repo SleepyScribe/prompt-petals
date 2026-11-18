@@ -1,9 +1,9 @@
 {
-    "display_name": "Prompt Petals - Emotion Engine",
+    "display_name": "Prompt Petals - Sakura Emotions",
     "loading_order": 50,
     "js": "index.js",
     "css": "style.css",
     "author": "SleepyScribe",
-    "version": "0.1.0",
+    "version": "0.2.1",
     "auto_update": false
 }

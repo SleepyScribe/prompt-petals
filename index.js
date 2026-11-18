@@ -1137,7 +1137,7 @@ function updateEmotionPrompt() {
     context.setExtensionPrompt(
         EMOTION_PROMPT_KEY,
         prompt,
-        PROMPT_POSITION.IN_CHAT,
+        PROMPT_POSITION.IN_PROMPT,
         0,
         false,
         PROMPT_ROLE.SYSTEM,
